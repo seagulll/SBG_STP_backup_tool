@@ -9,7 +9,7 @@ set wslint16 wl88191
 set nw_file_path /home/test167/elingyu/backup
 set nw_file_name wl88191_network_config_
 
-set ser_file_path /usr/local/etc/ser
+#set ser_file_path /usr/local/etc/ser
 
 set dns_file_path /var/named
 
@@ -40,10 +40,10 @@ send "$wlpasswd\r"
 expect "*>*"
 
 
-spawn scp $wluser@$wslint16:$ser_file_path/* /home/elingyu/SBG/backup/STP18/wslint16/SER2/SER2/.
-expect "Password: "
-send "$wlpasswd\r"
-expect "*>*"
+#spawn scp $wluser@$wslint16:$ser_file_path/* /home/elingyu/SBG/backup/STP18/wslint16/SER2/SER2/.
+#expect "Password: "
+#send "$wlpasswd\r"
+#expect "*>*"
 
 
 spawn scp $wluser@$wslint16:$dns_file_path/* /home/elingyu/SBG/backup/STP18/wslint16/DNS2/DNS2/.

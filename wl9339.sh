@@ -9,7 +9,7 @@ set wl9339 wl9339
 set nw_file_path /home/test167/elingyu/backup
 set nw_file_name wl9339_network_config_
 
-set xpres_file_path /home/test167/xPres
+#set xpres_file_path /home/test167/xPres
 
 
 spawn ssh $wluser@$wl9339
@@ -38,10 +38,10 @@ send "$wlpasswd\r"
 expect "*>*"
 
 
-spawn scp $wluser@$wl9339:$xpres_file_path/* /home/elingyu/SBG/backup/STP18/wl9339/xPres/xPres/.
-expect "Password: "
-send "$wlpasswd\r"
-expect "*>*"
+#spawn scp $wluser@$wl9339:$xpres_file_path/* /home/elingyu/SBG/backup/STP18/wl9339/xPres/xPres/.
+#expect "Password: "
+#send "$wlpasswd\r"
+#expect "*>*"
 
 
 

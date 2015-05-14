@@ -44,12 +44,12 @@ send "exit\r"
 expect "*sis1:~ #*"
 
 
-spawn scp $sisuser@$stpsis:/private/bs_ISER_5/usr/local/temp/operator/ISER1.conf /home/elingyu/SBG/backup/STP18/ISERs/.
+spawn scp $sisuser@$stpsis:/private/bs_ISER_4/usr/local/temp/operator/ISER1.conf /home/elingyu/SBG/backup/STP18/ISERs/.
 expect "Password: "
 send "$sispasswd\r"
 expect "*>*"
 
-spawn scp $sisuser@$stpsis:/private/bs_ISER_6/usr/local/temp/operator/ISER2.conf /home/elingyu/SBG/backup/STP18/ISERs/.
+spawn scp $sisuser@$stpsis:/private/bs_ISER_5/usr/local/temp/operator/ISER2.conf /home/elingyu/SBG/backup/STP18/ISERs/.
 expect "Password: "
 send "$sispasswd\r"
 expect "*>*"
