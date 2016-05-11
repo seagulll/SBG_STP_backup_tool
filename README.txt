@@ -6,7 +6,7 @@ Basic Induction:
 
 Command:
 ./backup.sh "server name" "n_backup_name"
-server name: wslint15, wslint16, wl8819, wl9339, titansim37, titansim65, sbg-xt018, bgf02, bgf06, bgf07, isers, or all.
+server name: wslint15, wslint16, wl8819, wl9339, titansim84, titansim65, titansim120, titansim121, sbg-xt018, bgf02, bgf06, bgf07, bgf11, bgf12, isers, or all.
 backup_name: you can define backup name.
 
 Author: ELINGYU

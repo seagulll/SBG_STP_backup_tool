@@ -29,6 +29,8 @@ fi
 function wslint15(){
 #mkdir /home/$USERID/SBG/backup/$STP/wslint15/SER1/SER1
 
+mkdir /home/$USERID/SBG/backup/$STP/kamailio/kamailio
+
 mkdir /home/$USERID/SBG/backup/$STP/wslint15/DNS1/DNS1
 
 /home/$USERID/SBG/backup/backup_tool/wslint15.sh
@@ -36,6 +38,7 @@ mkdir /home/$USERID/SBG/backup/$STP/wslint15/DNS1/DNS1
 mv /home/$USERID/SBG/backup/$STP/wslint15/network/wl88190_network_config_ /home/$USERID/SBG/backup/$STP/wslint15/network/wl88190_network_config_${DATE}${SUFFIX}.txt
 
 #mv /home/$USERID/SBG/backup/$STP/wslint15/SER1/SER1 /home/$USERID/SBG/backup/$STP/wslint15/SER1/SER1_${DATE}${SUFFIX}
+mv /home/$USERID/SBG/backup/$STP/kamailio/kamailio /home/$USERID/SBG/backup/$STP/kamailio/kamailio_${DATE}${SUFFIX}
 
 mv /home/$USERID/SBG/backup/$STP/wslint15/DNS1/DNS1 /home/$USERID/SBG/backup/$STP/wslint15/DNS1/DNS1_${DATE}${SUFFIX}
 }
@@ -81,22 +84,6 @@ mv /home/$USERID/SBG/backup/$STP/wl9339/network/wl9339_network_config_ /home/$US
 }
 
 
-################### titansim37 backup ####################
-function titansim37(){
-mkdir /home/$USERID/SBG/backup/$STP/titansim37/scripts/scripts
-
-/home/$USERID/SBG/backup/backup_tool/titansim37.sh
-
-rm -rf /home/$USERID/SBG/backup/$STP/titansim37/scripts/scripts/playlist.e*
-
-rm -rf /home/$USERID/SBG/backup/$STP/titansim37/scripts/scripts/release_evolution*
-
-mv /home/$USERID/SBG/backup/$STP/titansim37/network/interfaces /home/$USERID/SBG/backup/$STP/titansim37/network/interfaces_${DATE}${SUFFIX}
-
-mv /home/$USERID/SBG/backup/$STP/titansim37/scripts/scripts /home/$USERID/SBG/backup/$STP/titansim37/scripts/scripts_${DATE}${SUFFIX}
-}
-
-
 ################### titansim65 backup ####################
 function titansim65(){
 mkdir /home/$USERID/SBG/backup/$STP/titansim65/scripts/scripts
@@ -113,6 +100,54 @@ mv /home/$USERID/SBG/backup/$STP/titansim65/scripts/scripts /home/$USERID/SBG/ba
 }
 
 
+################### titansim84 backup ####################
+function titansim84(){
+mkdir /home/$USERID/SBG/backup/$STP/titansim84/scripts/scripts
+
+/home/$USERID/SBG/backup/backup_tool/titansim84.sh
+
+rm -rf /home/$USERID/SBG/backup/$STP/titansim84/scripts/scripts/playlist.e*
+
+rm -rf /home/$USERID/SBG/backup/$STP/titansim84/scripts/scripts/release_evolution*
+
+mv /home/$USERID/SBG/backup/$STP/titansim84/network/interfaces /home/$USERID/SBG/backup/$STP/titansim84/network/interfaces_${DATE}${SUFFIX}
+
+mv /home/$USERID/SBG/backup/$STP/titansim84/scripts/scripts /home/$USERID/SBG/backup/$STP/titansim84/scripts/scripts_${DATE}${SUFFIX}
+}
+
+
+################### titansim120 backup ####################
+function titansim120(){
+mkdir /home/$USERID/SBG/backup/$STP/titansim120/scripts/scripts
+
+/home/$USERID/SBG/backup/backup_tool/titansim120.sh
+
+rm -rf /home/$USERID/SBG/backup/$STP/titansim120/scripts/scripts/playlist.e*
+
+rm -rf /home/$USERID/SBG/backup/$STP/titansim120/scripts/scripts/release_evolution*
+
+mv /home/$USERID/SBG/backup/$STP/titansim120/network/interfaces /home/$USERID/SBG/backup/$STP/titansim120/network/interfaces_${DATE}${SUFFIX}
+
+mv /home/$USERID/SBG/backup/$STP/titansim120/scripts/scripts /home/$USERID/SBG/backup/$STP/titansim120/scripts/scripts_${DATE}${SUFFIX}
+}
+
+
+################### titansim121 backup ####################
+function titansim121(){
+mkdir /home/$USERID/SBG/backup/$STP/titansim121/scripts/scripts
+
+/home/$USERID/SBG/backup/backup_tool/titansim121.sh
+
+rm -rf /home/$USERID/SBG/backup/$STP/titansim121/scripts/scripts/playlist.e*
+
+rm -rf /home/$USERID/SBG/backup/$STP/titansim121/scripts/scripts/release_evolution*
+
+mv /home/$USERID/SBG/backup/$STP/titansim121/network/interfaces /home/$USERID/SBG/backup/$STP/titansim121/network/interfaces_${DATE}${SUFFIX}
+
+mv /home/$USERID/SBG/backup/$STP/titansim121/scripts/scripts /home/$USERID/SBG/backup/$STP/titansim121/scripts/scripts_${DATE}${SUFFIX}
+}
+
+
 ################### sbg-xt018 backup ####################
 function sbg-xt018(){
 /home/$USERID/SBG/backup/backup_tool/sbg-xt018.sh
@@ -126,15 +161,15 @@ mv /home/$USERID/SBG/backup/backup_tool/sbg-xt018_show_ /home/$USERID/SBG/backup
 
 
 ################### bgf02 backup ####################
-#function bgf02(){
-#/home/$USERID/SBG/backup/backup_tool/bgf02.sh
+function bgf02(){
+/home/$USERID/SBG/backup/backup_tool/bgf02.sh
 
-#dos2unix /home/$USERID/SBG/backup/backup_tool/BGF_show_
+dos2unix /home/$USERID/SBG/backup/backup_tool/BGF_show_
 
-#python /home/$USERID/SBG/backup/backup_tool/rm_bgf_illegal_char.py
+python /home/$USERID/SBG/backup/backup_tool/rm_bgf_illegal_char.py
 
-#mv /home/$USERID/SBG/backup/backup_tool/BGF_show_ /home/$USERID/SBG/backup/$STP/BGFs/BGF02_show_${DATE}${SUFFIX}.txt
-#}
+mv /home/$USERID/SBG/backup/backup_tool/BGF_show_ /home/$USERID/SBG/backup/$STP/BGFs/BGF02_show_${DATE}${SUFFIX}.txt
+}
 
 
 ################### bgf06 backup ####################
@@ -200,7 +235,7 @@ mv /home/$USERID/SBG/backup/$STP/ISERs/ISER2.conf /home/$USERID/SBG/backup/$STP/
 if [ -n "$1" ]; then
   echo "Start backup ..."; 
 else
-  echo "Please enter the correct server name: wslint15, wslint16, wl8819, wl9339, titansim37, titansim65, sbg-xt018, bgf06, bgf07, bgf11, bgf12, isers, or all.";
+  echo "Please enter the correct server name: wslint15, wslint16, wl8819, wl9339, titansim65, titansim84, titansim120, titansim121, sbg-xt018, bgf02, bgf06, bgf07, bgf11, bgf12, isers, or all.";
 exit;
 fi
 
@@ -208,7 +243,7 @@ fi
 for args in $@
 do
 
-  if [ "${args:0:2}" != "n_" ] && [ "$args" != "wslint15" ] && [ "$args" != "wslint16" ] && [ "$args" != "wl8819" ] && [ "$args" != "wl9339" ] && [ "$args" != "titansim37" ] && [ "$args" != "titansim65" ] && [ "$args" != "sbg-xt018" ] && [ "$args" != "bgf06" ] && [ "$args" != "bgf07" ] && [ "$args" != "bgf11" ] && [ "$args" != "bgf12" ] && [ "$args" != "isers" ] && [ "$args" != "all" ];
+  if [ "${args:0:2}" != "n_" ] && [ "$args" != "wslint15" ] && [ "$args" != "wslint16" ] && [ "$args" != "wl8819" ] && [ "$args" != "wl9339" ] && [ "$args" != "titansim65" ] && [ "$args" != "titansim84" ] && [ "$args" != "titansim120" ] && [ "$args" != "titansim121" ] && [ "$args" != "sbg-xt018" ] && [ "$args" != "bgf02" ] && [ "$args" != "bgf06" ] && [ "$args" != "bgf07" ] && [ "$args" != "bgf11" ] && [ "$args" != "bgf12" ] && [ "$args" != "isers" ] && [ "$args" != "all" ];
   then
      echo "Can not find the server name: $args";
      exit;
@@ -228,12 +263,18 @@ do
      wl8819;
   elif [ "$args" = "wl9339" ]; then
      wl9339;
-  elif [ "$args" = "titansim37" ]; then
-     titansim37;
   elif [ "$args" = "titansim65" ]; then
      titansim65;
+  elif [ "$args" = "titansim84" ]; then
+     titansim84;
+  elif [ "$args" = "titansim120" ]; then
+     titansim120;
+  elif [ "$args" = "titansim121" ]; then
+     titansim121;
   elif [ "$args" = "sbg-xt018" ]; then
      sbg-xt018;
+  elif [ "$args" = "bgf02" ]; then
+     bgf02;
   elif [ "$args" = "bgf06" ]; then
      bgf06;
   elif [ "$args" = "bgf07" ]; then
@@ -249,9 +290,12 @@ do
      wslint16;
      wl8819;
      wl9339;
-     titansim37;
      titansim65;
+     titansim84;
+     titansim120;
+     titansim121;
      sbg-xt018;
+     bgf02;
      bgf06;
      bgf07;
      bgf11;
